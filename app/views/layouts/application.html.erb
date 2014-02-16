@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DemoApp</title>
+  <title><%= full_title(yield(:title)) %>></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<header class="navbaar navbaar-fixed-top naavbar-inverse">
+		<div class="navbaar-inner">
+			<div class="container">
+				<%= link_to "Sample app", '#', id:"logo" %>
+				<nav>
+					<ul clss="nav pull-right">
+					<li><%= link_to "Home", '#' %></li>
+					<li><%= link_to "Help", '#' %></li>
+					<li><%= link_to "Sign in", '#' %></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<%= yield %>
+	</div>
 </body>
 </html>
