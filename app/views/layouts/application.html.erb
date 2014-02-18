@@ -5,24 +5,13 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 </head>
 <body>
-	<header class="navbaar navbaar-fixed-top naavbar-inverse">
-		<div class="navbaar-inner">
-			<div class="container">
-				<%= link_to "Sample app", '#', id:"logo" %>
-				<nav>
-					<ul clss="nav pull-right">
-					<li><%= link_to "Home", '#' %></li>
-					<li><%= link_to "Help", '#' %></li>
-					<li><%= link_to "Sign in", '#' %></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</header>
+	<%= render 'layouts/header' %>
 	<div class="container">
 		<%= yield %>
+		<%= render 'layouts/footer' %>
 	</div>
 </body>
 </html>
