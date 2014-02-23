@@ -10,8 +10,8 @@
 			<%= f.label :email %>
 			<%= f.text_field :email %>
 			
-			<%= f.label :password %>
-			<%= f.password_field :password %>
+			<%= f.label :password_digest %>
+			<%= f.password_field :password_digest %>
 			
 			<%= f.label :password_confirmation, "Confrimation" %>
 			<%= f.password_field :password_confirmation %>
